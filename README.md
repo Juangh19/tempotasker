@@ -6,7 +6,7 @@ Tempotasker is a productivity-boosting web application developed using React and
 
 ## Live Demo
 
-Experience the power of Tempotasker by trying out the [Live Demo](https://juangh19.github.io/tempotasker/)!
+Experience the power of Tempotasker by trying out the [Live Demo](https://juangh19.github.io/tempotasker/){:target="\_blank"}!
 
 ## Features
 
