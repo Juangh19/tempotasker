@@ -1,0 +1,62 @@
+.doing-column {
+	height: fit-content;
+}
+
+.title-doing {
+	background-color: var(--gray-color-table);
+	border-top: 1px solid var(--white-color-text);
+}
+
+.doing-task {
+	background-color: var(--gray-color-table);
+	border-bottom: 1px solid var(--white-color-text);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 0.75rem;
+
+	padding: 1.025rem 2.5rem;
+	border-radius: 0 0 0.5rem 0.5rem;
+}
+
+.doing-task-name {
+	text-align: center;
+	font-size: 0.875rem;
+	font-weight: 600;
+	line-height: normal;
+}
+
+.progress-bar[value] {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	width: 100%;
+	border-radius: 0.5rem;
+	background: var(--dark-color-text);
+	height: 0.5rem;
+}
+.progress-bar[value]::-webkit-progress-bar {
+	border-radius: 0.5rem;
+	background: var(--dark-color-text);
+}
+.progress-bar[value]::-webkit-progress-value {
+	border-radius: 0.5rem;
+	background: var(--load-color);
+	box-shadow: 0 0 2px 0px var(--dark-color-text);
+}
+progress[value]::-moz-progress-bar {
+	border-radius: 0.5rem;
+	background: var(--load-color);
+}
+
+@media (max-width: 768px) {
+	.doing-task {
+		padding: 1.0255rem 1.5rem;
+	}
+
+	.progress-bar[value] {
+		max-width: 120px;
+	}
+}

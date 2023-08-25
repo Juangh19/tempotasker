@@ -1,0 +1,19 @@
+.table-content {
+	width: 100%;
+	display: flex;
+	color: var(--dark-color-text);
+	flex-grow: 1;
+}
+
+.table-content > * {
+	flex: 1;
+	max-width: 246px;
+}
+
+.app-container {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	margin: 0 1rem;
+	min-height: 100vh;
+}

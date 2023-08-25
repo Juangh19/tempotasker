@@ -1,0 +1,119 @@
+.done-column {
+	height: fit-content;
+}
+
+.title-done {
+	border: 1px solid var(--white-color-text);
+	background-color: var(--gray-color-table);
+	border-radius: 0 0.5rem 0 0;
+	border: 1;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 0.5rem;
+	height: 4rem;
+	border-bottom: none;
+	position: relative;
+}
+
+.title-table h2 {
+	font-size: 1.5rem;
+	font-weight: 700;
+}
+
+hr {
+	width: 7.5rem;
+	height: 0rem;
+	margin: auto;
+	border: 1px solid var(--white-color-text);
+	position: absolute;
+	bottom: 0;
+}
+
+.done-task-cont {
+	border: 1px solid var(--white-color-text);
+	border-top: none;
+	border-radius: 0 0 0.5rem 0.5rem;
+	background-color: var(--gray-color-table);
+}
+
+.done-task {
+	border: 1px solid var(--white-color-text);
+	position: relative;
+	border-top: none;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+
+	padding: 0.8195rem 0.75rem;
+	border-top: none;
+	border-bottom: 1px solid var(--white-color-text);
+	background-color: var(--gray-color-table);
+}
+
+.done-task-description {
+	display: flex;
+	flex-direction: column;
+}
+
+.task-name {
+	font-size: 0.875rem;
+	font-weight: 600;
+}
+
+.task-below-name {
+	display: flex;
+	gap: 0.5rem;
+	align-items: center;
+}
+
+.re-add-task {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+
+.done-task-duration {
+	font-size: 0.75rem;
+	font-weight: 400;
+}
+
+.clear-done-task-button {
+	padding: 1rem;
+	background-color: var(--gray-color-table);
+	text-align: center;
+	border-radius: 0 0 0.5rem 0.5rem;
+	border: 1px solid var(--white-color-text);
+	border-top: none;
+}
+
+.clear-done-task-button span {
+	text-decoration: underline;
+	font-weight: 600;
+	cursor: pointer;
+}
+
+@media (max-width: 768px) {
+	.check-done-task {
+		position: absolute;
+		top: 0rem;
+		right: 0rem;
+		transform: rotate(10deg);
+		opacity: 0.5;
+	}
+	.check-done-task > * {
+		height: 1.5rem;
+		width: 1.5rem;
+	}
+
+	.done-task {
+		text-align: center;
+	}
+
+	.done-task-description {
+		width: 100%;
+	}
+	.task-below-name {
+		justify-content: center;
+	}
+}

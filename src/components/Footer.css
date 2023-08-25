@@ -1,0 +1,15 @@
+.footer {
+	margin: 1rem auto;
+	border-radius: 1rem;
+	padding: 1rem;
+	bottom: 0;
+	background-color: rgba(56, 56, 56, 0.6);
+	text-align: center;
+	font-weight: 500;
+	color: var(--white-color-text);
+}
+
+.footer a {
+	color: #8bb5e3;
+	font-weight: 600;
+}

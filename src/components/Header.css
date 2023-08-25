@@ -1,0 +1,42 @@
+header {
+	text-align: center;
+	color: var(--white-color-text);
+}
+
+.title {
+	font-size: 6rem;
+	font-weight: 700;
+	line-height: normal;
+	margin-bottom: 0.5rem;
+	transition: all 0.2s ease-in-out;
+}
+
+.quote {
+	font-size: 0.875rem;
+	font-style: normal;
+	font-weight: 700;
+	line-height: normal;
+}
+
+.header.is-running .title {
+	font-size: 3rem;
+	margin-bottom: 0.5rem;
+}
+
+.header.is-running .quote {
+	display: none;
+}
+
+@media (max-width: 768px) {
+	.title {
+		font-size: 3rem;
+	}
+
+	.quote {
+		font-size: 0.75rem;
+	}
+
+	.header.is-running .title {
+		font-size: 2rem;
+	}
+}

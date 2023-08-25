@@ -1,0 +1,84 @@
+.timer-progress[value] {
+	--background: radial-gradient(50% 50%, var(--c) 98%, #0000) top/10% 10%
+			no-repeat,
+		conic-gradient(var(--c) calc(var(--p) * 1%), #0000 0);
+
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	border: none;
+	position: absolute;
+	inset: 0;
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	overflow: hidden;
+	background: var(--background);
+	-webkit-mask: radial-gradient(50% 50%, #0000 80%, #000 80% 100%, #0000 102%);
+}
+.timer-progress[value]::-webkit-progress-bar {
+	background: var(--background);
+}
+.timer-progress[value]::-webkit-progress-value {
+	background: #0000;
+}
+.timer-progress[value]::-moz-progress-bar {
+	background: #0000;
+}
+
+.label-timer-progress {
+	--w: 13rem; /* the width*/
+	--c: var(--load-color); /* the color */
+	font-size: 20px;
+	font-weight: bold;
+	display: inline-grid;
+	place-content: center;
+	width: var(--w);
+	aspect-ratio: 1;
+	position: relative;
+}
+.label-timer-progress::before {
+	content: '';
+	position: absolute;
+	border-radius: 50%;
+	inset: 45%;
+	background: var(--c);
+	transform: rotate(calc(var(--p) * 3.605deg))
+		translateY(calc(50% - var(--w) / 2));
+}
+
+.timer {
+	display: flex;
+	justify-content: center;
+}
+
+.timer-counter {
+	color: var(--white-color-text);
+	font-size: 2rem;
+	font-style: normal;
+	font-weight: 800;
+}
+
+.timer-buttons {
+	position: absolute;
+	left: 0;
+	right: 0;
+	margin: auto;
+	display: flex;
+	justify-content: center;
+	bottom: 2rem;
+	z-index: 10;
+	color: var(--load-color);
+}
+
+.timer-buttons > * {
+	cursor: pointer;
+}
+
+.timer-exit-icon {
+	width: 2rem;
+}
+
+.play-timer-button {
+	width: 2rem;
+}
