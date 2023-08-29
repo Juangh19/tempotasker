@@ -5,6 +5,7 @@ import { v4 as uuidv4 } from 'uuid';
 import { useAddTaskForm } from '../hooks/UseAddTaskForm';
 import { useAddTaskOperation } from '../hooks/UseAddTaskOperation';
 import { OperationType } from '../hooks/UseAddTaskOperation';
+import { useEffect, useRef } from 'react';
 
 interface Props {
 	addingTask: boolean;
@@ -13,6 +14,7 @@ interface Props {
 
 export function AddTask({ addingTask, setAddingTask }: Props) {
 	const { addTask } = useTasksContext();
+	const inputNameRef = useRef<HTMLInputElement | null>(null);
 
 	const {
 		inputName,
@@ -49,6 +51,12 @@ export function AddTask({ addingTask, setAddingTask }: Props) {
 		}
 	};
 
+	useEffect(() => {
+		if (addingTask) {
+			inputNameRef.current?.focus();
+		}
+	}, [addingTask]);
+
 	return (
 		<div className='add-task' style={{ top: addingTask ? '50%' : '-50%' }}>
 			<div className='add-task-exit' onClick={() => setAddingTask(false)}>
@@ -59,6 +67,7 @@ export function AddTask({ addingTask, setAddingTask }: Props) {
 				<div className='add-task-name'>
 					<label htmlFor='name'>Task name:</label>
 					<input
+						ref={inputNameRef}
 						type='text'
 						name='name'
 						id='name'
